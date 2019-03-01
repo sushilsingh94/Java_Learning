@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/TransitTime" xmlns:tns="urn:transittime.cat.com"
+	elementFormDefault="unqualified">
+
+	<xsd:element name="SPPTransitTimeRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="sPPTransitTimeParamsList" maxOccurs="100"
+					type="SPPTransitTimeParams" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+
+
+	<xsd:complexType name="SPPTransitTimeParams">
+		<xsd:sequence>
+			<xsd:element name="portofExit" type="string" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+</xsd:schema>
